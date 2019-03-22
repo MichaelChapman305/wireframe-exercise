@@ -1,1 +1,77 @@
+#container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 125px 900px 125px;
+  grid-gap: 5px;
+  grid-template-areas: 
+    "header header header header"
+    ". main main ."
+    "footer footer footer footer";
+}
 
+header {
+  grid-area: header;
+  background-color: gray;
+  color: white;
+  justify-content: space-between;
+  display: inline;
+}
+
+header img {
+  float: left;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+header nav {
+  float: right;
+  margin-right: 30px;
+  width: 150px;
+  
+}
+
+li {
+  display: inline;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 65px;
+  float: center;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#bodyContainer {
+  grid-area: main;
+}
+
+h3 {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+}
+
+#bodyContainer section article {
+  display: inline-block;
+  border: 1px solid black;
+  width: 400px;
+  height: 450px;
+  margin-left: 100px;
+}
+
+#bodyContainer section figure {
+  display: inline-block;
+  margin-left: 200px;
+  margin-top: 100px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: gray;
+  margin-top: 100%;
+}
