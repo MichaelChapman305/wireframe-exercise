@@ -1,73 +1,99 @@
 #container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 125px 900px 125px;
+  grid-template-columns: 125px 400px auto 400px 125px;
+  grid-template-rows: auto;
   grid-gap: 5px;
   grid-template-areas: 
-    "header header header header"
-    ". main main ."
-    "footer footer footer footer";
+    "header header header header header"
+    ". main main main ."
+    "footer footer footer footer footer";
 }
 
 header {
   grid-area: header;
   background-color: gray;
   color: white;
-  justify-content: space-between;
-  display: inline;
+  text-align: center;
 }
 
 header img {
-  float: left;
+  display: inline-block;
   margin-top: 30px;
   margin-left: 30px;
+  align-self: center;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 65px;
+  text-align: center;
+  font-weight: bold;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 header nav {
-  float: right;
+  display: inline-block;
   margin-right: 30px;
   width: 150px;
-  
 }
 
-li {
+.navList {
   display: inline;
   margin-right: 10px;
 }
 
-h1 {
-  font-size: 65px;
-  float: center;
-  margin-top: 30px;
-  text-align: center;
-  font-weight: bold;
-}
-
 #bodyContainer {
   grid-area: main;
+  margin-top: 35px;
+}
+
+#upperBody {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#upperBody article {
+  display: inline-block;
+  width: 350px;
+  margin-right: 200px;
+  text-align: left;
 }
 
 h3 {
   font-size: 45px;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
-p {
+#upperBody article p {
   font-size: 18px;
+  margin-bottom: 25px;
 }
 
-#bodyContainer section article {
+#upperBody figure {
   display: inline-block;
-  border: 1px solid black;
-  width: 400px;
-  height: 450px;
-  margin-left: 100px;
+  justify-content: center;
 }
 
-#bodyContainer section figure {
+#lowerBody {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#lowerBody article {
   display: inline-block;
+  text-align: left;
+}
+
+#lowerBody figure {
+  display: inline-block;
+  margin-right: 200px;
   margin-left: 200px;
-  margin-top: 100px;
+}
+
+#locationList, #hoursList {
+  list-style-type: disc;
 }
 
 footer {
